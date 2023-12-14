@@ -1,5 +1,4 @@
 
-
 /* Sharpshooter Font*/
 @font-face {
   font-family: 'Sharpshooter';
@@ -60,11 +59,11 @@ img {
     height: 100%
 }
 
-.userPoints, .machinePoints,
+.userScore, .machineScore,
 .user, .machine {
     filter: brightness(.7);
 }
-.machinePoints, .userPoints {
+.machineScore, .userScore {
 font-size: 1.2rem;
 }
 
@@ -117,7 +116,7 @@ main {
     text-align: center;
     background: #0c0c0c;
 }
-.points {
+.score {
     display: flex;
     justify-content: space-around;
     margin-bottom: 2rem;
@@ -128,8 +127,6 @@ main {
     width: 100%;
     min-width: 25rem;
     height: 5rem;
-    border-bottom: 1px solid #555;
-    padding-bottom: 2rem;
 }
 
 .shapes button {
@@ -181,6 +178,8 @@ main {
     font-weight: 700;
     color: #eaf5ff;
     height: 3rem;
+    border-bottom: 1px solid #555;
+    padding-bottom: 2rem;
 }
 
 #modalScore {
