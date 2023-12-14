@@ -1,4 +1,5 @@
 
+
 /* Sharpshooter Font*/
 @font-face {
   font-family: 'Sharpshooter';
@@ -32,9 +33,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: grayscale(1);
-    cursor:
-        url(./img/default.png) 1 1,
-        default;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    cursor: url(./img/default.png) 1 1,
+            default;
+    
 }
 
 body:hover {
@@ -226,3 +230,4 @@ main {
     -webkit-text-fill-color: inherit;
     text-shadow: -4px 3px 1px #232020;
 }
+
