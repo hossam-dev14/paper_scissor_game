@@ -22,23 +22,18 @@ const showPoints = () => {
     machineP.textContent = machinePoints;
 }
 
+showPoints();
 
-(function () {
-    // Invoked by it self (started) automatically, without being called
-    userP.textContent = userPoints;
-    machineP.textContent = machinePoints; 
-})();
-
-function getVal(btnVal) {
+function getValues(btnVal) {
     // Random number
     const randomNum = Math.floor(Math.random() * arr.length);
     let userVal = btnVal,
         machineVal = arr[randomNum];
 
     // Update img source
-    userImg.setAttribute('src', `./img/${userVal.toLowerCase()}.png`);
+    userImg.setAttribute('src', `./img/${userVal}.png`);
     userImg.setAttribute('alt', `${userVal}`);
-    machineImg.setAttribute('src', `./img/${machineVal.toLowerCase()}.png`);
+    machineImg.setAttribute('src', `./img/${machineVal}.png`);
     machineImg.setAttribute('alt', `${machineVal}`);
 
     userImg.style.transform = 'rotate(0deg)';
@@ -76,8 +71,9 @@ function scoreEnd() {
         // Reset points
         userPoints = 0,
         machinePoints = 0;
-    } else { whoWon.style.transform = 'scale(0.3)'; }
-
+    } else { 
+        whoWon.style.transform = 'scale(0.3)';}
+        
     showPoints();
 }
 
