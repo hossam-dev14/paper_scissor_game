@@ -36,9 +36,9 @@ function getVal(btnVal) {
         machineVal = arr[randomNum];
 
     // Update img source
-    userImg.setAttribute('src', `./img/${userVal}.png`);
+    userImg.setAttribute('src', `./img/${userVal.toLowerCase()}.png`);
     userImg.setAttribute('alt', `${userVal}`);
-    machineImg.setAttribute('src', `./img/${machineVal}.png`);
+    machineImg.setAttribute('src', `./img/${machineVal.toLowerCase()}.png`);
     machineImg.setAttribute('alt', `${machineVal}`);
 
     userImg.style.transform = 'rotate(0deg)';
