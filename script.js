@@ -94,6 +94,6 @@ tryAgain.addEventListener('click', () => {
 // Exit button
 exit.addEventListener('click', () => {
     // Go to the home page
-    window.location.href = 'https://hossam-dev14.github.io/paper_scissor_game/';
+    window.location.href = 'https://hossam-dev14.github.io/paper_scissor_game';
 })
 
