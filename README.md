@@ -1,1 +1,1 @@
-# paper_scissor_game
+# Paper Scissor Game
