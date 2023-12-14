@@ -1,13 +1,13 @@
-
-
+/* Sharpshooter Font*/
 @font-face {
   font-family: 'Sharpshooter';
   src: url('fonts/Sharpshooter.otf');
 }
-
+/*Attack Of Monster Font*/
 @font-face {
   font-family: 'Attack Of Monster';
-  src: url('fonts/Attack Of Monster.otf');
+  src: url('fonts/Attack Of Monster.otf'),
+       url('fonts/Attack Of Monster.ttf');
 }
 
 * {
