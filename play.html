@@ -17,18 +17,8 @@
                 Machine Points: <span></span>
             </div>
         </div>
-
-        <div class="shapes">
-            <button onclick="getVal('Paper')">
-                <img src="./img/paper.png" alt="paper">
-            </button>
-            <button onclick="getVal('Rock')">
-                <img src="./img/rock.png" alt="rock">
-            </button>
-            <button onclick="getVal('Scissor')">
-                <img src="./img/scissor.png" alt="scissor">
-            </button>
-        </div>
+        
+        <div class="showResult gradientBg">????</div>
 
         <div class="wrapper">
             <div class="user">
@@ -42,7 +32,17 @@
             </div>
         </div>
 
-        <div class="showResult gradientBg">????</div>
+        <div class="shapes">
+            <button onclick="getValues('Paper')">
+                <img src="./img/paper.png" alt="paper">
+            </button>
+            <button onclick="getValues('Rock')">
+                <img src="./img/rock.png" alt="rock">
+            </button>
+            <button onclick="getValues('Scissor')">
+                <img src="./img/scissor.png" alt="scissor">
+            </button>
+        </div>
 
         <div id="modalScore">
             <h2 class="score gradientBg"></h2>
