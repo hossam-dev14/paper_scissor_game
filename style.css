@@ -1,0 +1,224 @@
+
+
+@font-face {
+  font-family: 'Sharpshooter';
+  src: url('fonts/Sharpshooter.otf');
+}
+
+@font-face {
+  font-family: 'Attack Of Monster';
+  src: url('fonts/Attack Of Monster.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d1d1d1;
+    height: 100vh;
+    overflow: hidden;
+    filter: none;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    transition: ease-in-out .1s all;
+    background-image: url(./img/3dbackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: grayscale(1);
+    cursor:
+        url(./img/default.png) 1 1,
+        default;
+}
+
+body:hover {
+    backdrop-filter: grayscale(.7);
+    filter: brightness(1.3);
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+button {
+    background: no-repeat;
+    border: none;
+    color: inherit;
+}
+img {
+    width: 100%;
+    height: 100%
+}
+
+.userPoints, .machinePoints,
+.user, .machine {
+    filter: brightness(.7);
+}
+.machinePoints, .userPoints {
+font-size: 1.2rem;
+}
+
+.home_page h2 a,
+.shapes button,
+#exit, #tryAgain{
+    cursor: url(./img/pointer.png) 1 1,
+            pointer;
+}
+
+.gradientBg {
+    background: -webkit-linear-gradient(314deg, #ff007b,#0052d3, #ff7600);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home_page {
+    font-family: Attack Of Monster, Arial, Helvetica, sans-serif;
+    margin-top: 2rem;
+}
+
+.home_page h1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 3rem;
+    font-size: 5rem;
+    filter: drop-shadow(-7px 7px 0px #010);
+}
+
+.home_page h2 {
+    font-size: 3rem;
+    padding: .7rem 1rem;
+    border-radius: 12px;
+    box-shadow: #232323 4px 4px 10px 0px;
+}
+
+.home_page h2:hover {
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: inherit;
+    text-shadow: -5px 5px 1px #232020;
+}
+
+main {
+    font-family: Sharpshooter;
+    font-size: 19px;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    background: #0c0c0c;
+}
+.points {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+.shapes {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    min-width: 25rem;
+    height: 5rem;
+    border-bottom: 1px solid #555;
+    padding-bottom: 2rem;
+}
+
+.shapes button {
+    width: 5rem;
+    height: 5rem;
+}
+.shapes button:hover {
+    filter: brightness(1.7);
+}
+
+.shapes button>img {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #555;
+    margin-bottom: 2rem; 
+}
+
+.wrapper .user, .wrapper .machine {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .user #userChoise,.wrapper .machine #machineChoise{
+    width: 8.7rem;
+    height: 10.3rem;
+}
+
+.wrapper .user #userChoise{transform: rotate(90deg);}
+.wrapper .machine #machineChoise{transform: rotate(269deg);}
+
+.wrapper .user h4, .wrapper .machine h4 {margin: 1rem 0 .7rem;}
+
+.showResult {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #eaf5ff;
+    height: 3rem;
+}
+
+
+#modalScore {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #121212;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    visibility: hidden;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modalScore .score{
+    padding: 0.3rem 2rem;
+    margin-top: 2rem;
+    border-radius: 15px;
+    font-size: 3rem;
+    transform: scale(0.3);
+    transition: ease .47s transform;
+}
+
+.buttons {
+    width: 23rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+#exit ,#tryAgain{
+    /* position: absolute; */
+    padding: 15px 20px;
+    border-radius: 14px;
+    font-size: 19px;
+    font-family: Sharpshooter, Arial, Helvetica, sans-serif;
+    box-shadow: #232323 4px 4px 10px 0px;
+}
+
+#exit:hover ,#tryAgain:hover{
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: inherit;
+    text-shadow: -4px 3px 1px #232020;
+}
+
