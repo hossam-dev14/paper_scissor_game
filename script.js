@@ -51,7 +51,7 @@ function getVal(btnVal) {
     userVal == 'Paper' && machineVal == 'Scissor'  ? (result.innerHTML = 'Machine Win!') && machinePoints++ :  
     userVal == 'Scissor' && machineVal == 'Rock'  ? (result.innerHTML = 'Machine Win!') && machinePoints++ : 
     userVal == 'Scissor' && machineVal == 'Paper'  ? (result.innerHTML = 'User Win!') && userPoints++ : 
-    result.innerHTML = 'Check Your Connection!';
+    result.innerHTML = 'Somthing wrong!!';
 
     showPoints();
     scoreEnd();
