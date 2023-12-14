@@ -9,12 +9,12 @@
 </head>
 <body>
     <main class="play_page">
-        <div class="points">
-            <div class="userPoints">
-                User Points: <span></span>
+        <div class="score">
+            <div class="userScore">
+                User Score: <span></span>
             </div>
-            <div class="machinePoints">
-                Machine Points: <span></span>
+            <div class="machineScore">
+                Machine Score: <span></span>
             </div>
         </div>
         
@@ -33,13 +33,13 @@
         </div>
 
         <div class="shapes">
-            <button onclick="getValues('Paper')">
+            <button onclick="playGame('Paper')">
                 <img src="./img/paper.png" alt="paper">
             </button>
-            <button onclick="getValues('Rock')">
+            <button onclick="playGame('Rock')">
                 <img src="./img/rock.png" alt="rock">
             </button>
-            <button onclick="getValues('Scissor')">
+            <button onclick="playGame('Scissor')">
                 <img src="./img/scissor.png" alt="scissor">
             </button>
         </div>
