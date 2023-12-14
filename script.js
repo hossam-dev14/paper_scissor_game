@@ -98,6 +98,6 @@ tryAgain.addEventListener('click', () => {
 // Exit button
 exit.addEventListener('click', () => {
     // Go to the home page
-    window.location.pathname = './index.html';
+    window.location.pathname = './paper_scissor_game/index.html';
 })
 
