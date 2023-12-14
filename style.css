@@ -1,3 +1,4 @@
+
 /* Sharpshooter Font*/
 @font-face {
   font-family: 'Sharpshooter';
@@ -130,9 +131,14 @@ main {
 .shapes button {
     width: 5rem;
     height: 5rem;
+    padding: 3px;
+    border: 2px solid #444;
+    border-radius: 10px;
+    box-shadow: #252525 0px 0px 14px 0px;
 }
 .shapes button:hover {
     filter: brightness(1.7);
+    box-shadow: inset #2d2c2c 0px 0px 5px 0px;
 }
 
 .shapes button>img {
@@ -172,7 +178,6 @@ main {
     color: #eaf5ff;
     height: 3rem;
 }
-
 
 #modalScore {
     display: flex;
@@ -221,4 +226,3 @@ main {
     -webkit-text-fill-color: inherit;
     text-shadow: -4px 3px 1px #232020;
 }
-
