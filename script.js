@@ -3,8 +3,8 @@
 const user = document.querySelector('.userChoise'),
     machine = document.querySelector('.machineChoise'),
     result = document.querySelector('.showResult'),
-    userP =document.querySelector('.userPoints>span'),
-    machineP =document.querySelector('.machinePoints>span'),
+    userP =document.querySelector('.userScore>span'),
+    machineP =document.querySelector('.machineScore>span'),
     modalScore =document.querySelector("#modalScore"),
     userImg = document.querySelector('#userChoise'),
     machineImg = document.querySelector('#machineChoise'),
@@ -13,18 +13,18 @@ const user = document.querySelector('.userChoise'),
 
 // Declaring array with 3 elemetns
 const arr = ['Rock', 'Paper', 'Scissor'];
-let userPoints = 0,
-    machinePoints = 0;
+let userScore = 0,
+    machineScore = 0;
 
-// Show Points
-const showPoints = () => {
-    userP.textContent = userPoints;
-    machineP.textContent = machinePoints;
+// Show Score
+const showScore = () => {
+    userP.textContent = userScore;
+    machineP.textContent = machineScore;
 }
 
-showPoints();
+showScore();
 
-function getValues(btnVal) {
+function playGame(btnVal) {
     // Random number
     const randomNum = Math.floor(Math.random() * arr.length);
     let userVal = btnVal,
@@ -40,41 +40,41 @@ function getValues(btnVal) {
     machineImg.style.transform = 'rotate(0deg)';
 
     userVal ===  machineVal ? (result.innerHTML = 'Draw') : 
-    userVal == 'Rock' && machineVal == 'Paper'  ? (result.innerHTML = 'Machine Win!') && machinePoints++ : 
-    userVal == 'Rock' && machineVal == 'Scissor'  ? (result.innerHTML = 'User Win!') && userPoints++ :
-    userVal == 'Paper' && machineVal == 'Rock'  ? (result.innerHTML = 'User Win!') && userPoints++ : 
-    userVal == 'Paper' && machineVal == 'Scissor'  ? (result.innerHTML = 'Machine Win!') && machinePoints++ :  
-    userVal == 'Scissor' && machineVal == 'Rock'  ? (result.innerHTML = 'Machine Win!') && machinePoints++ : 
-    userVal == 'Scissor' && machineVal == 'Paper'  ? (result.innerHTML = 'User Win!') && userPoints++ : 
-    result.innerHTML = 'Somthing wrong!!';
+    userVal == 'Rock' && machineVal == 'Paper'  ? (result.innerHTML = 'Machine Win!') && machineScore++ : 
+    userVal == 'Rock' && machineVal == 'Scissor'  ? (result.innerHTML = 'User Win!') && userScore++ :
+    userVal == 'Paper' && machineVal == 'Rock'  ? (result.innerHTML = 'User Win!') && userScore++ : 
+    userVal == 'Paper' && machineVal == 'Scissor'  ? (result.innerHTML = 'Machine Win!') && machineScore++ :  
+    userVal == 'Scissor' && machineVal == 'Rock'  ? (result.innerHTML = 'Machine Win!') && machineScore++ : 
+    userVal == 'Scissor' && machineVal == 'Paper'  ? (result.innerHTML = 'User Win!') && userScore++ : 
+    result.innerHTML = 'Upsss !!';
 
-    showPoints();
-    scoreEnd();
+    showScore();
+    gameOver();
 }
 
 // who Won the score
-function scoreEnd() {
+function gameOver() {
     let whoWon = modalScore.querySelector('.score');
  
     // if the user or won or lose
-    if(userPoints === 3 || machinePoints === 3){
+    if(userScore === 3 || machineScore === 3){
 
         // display modal
         modalScore.style.visibility = 'visible';
         whoWon.style.transform = 'scale(1.5)';
 
         // Who won the game
-        userPoints > machinePoints ? whoWon.innerHTML = 'You Won!' :
-        userPoints < machinePoints ? whoWon.innerHTML = 'You Lose!':
+        userScore > machineScore ? whoWon.innerHTML = 'You Won!' :
+        userScore < machineScore ? whoWon.innerHTML = 'You Lose!':
         whoWon.innerHTML = 'Draw';
 
-        // Reset points
-        userPoints = 0,
-        machinePoints = 0;
+        // Reset Score
+        userScore = 0,
+        machineScore = 0;
     } else { 
         whoWon.style.transform = 'scale(0.3)';}
         
-    showPoints();
+    showScore();
 }
 
 // Try to play again 
