@@ -15,8 +15,7 @@ https://hossam-dev14.github.io/paper_scissor_game
 Paper Scissor Game it's a game challenge by  ![Simploline.co](https://maghreb.simplonline.co).
 I designed this game using HTML, CSS and Vanilla JavaScript, where a player will be playing against the compute.
 
-The principles of the game in this image below:
-![principles of game](https://github.com/hossam-dev14/paper_scissor_game/assets/73648971/316eba8a-89a9-4f5d-9759-3e320cd158ef)
+The principles of the game in this image below: ![principles of game](https://github.com/hossam-dev14/paper_scissor_game/assets/73648971/316eba8a-89a9-4f5d-9759-3e320cd158ef)
 
 ## Contact
 
